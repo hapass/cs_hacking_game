@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Threading.Tasks;
 
-namespace Game
+namespace hacking_game
 {
     class MainClass
     {
@@ -11,8 +11,10 @@ namespace Game
 
         public static void Main(string[] args)
         {
+            Sound.Load();
             StartGame();
             StartLoop();
+            Sound.Dispose();
         }
 
         public static async void StartGame()
@@ -48,6 +50,7 @@ namespace Game
             {
                 var timeToFindCharacter = random.Next(10, 100);
                 await Task.Delay(timeToFindCharacter);
+                Sound.Play();
                 Console.Write(ch);
             }
 
