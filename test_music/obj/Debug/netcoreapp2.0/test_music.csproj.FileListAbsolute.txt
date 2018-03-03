@@ -1,0 +1,11 @@
+/Users/pavelza/Documents/work/test/test_music/bin/Debug/netcoreapp2.0/test_music.deps.json
+/Users/pavelza/Documents/work/test/test_music/bin/Debug/netcoreapp2.0/test_music.runtimeconfig.json
+/Users/pavelza/Documents/work/test/test_music/bin/Debug/netcoreapp2.0/test_music.runtimeconfig.dev.json
+/Users/pavelza/Documents/work/test/test_music/bin/Debug/netcoreapp2.0/test_music.dll
+/Users/pavelza/Documents/work/test/test_music/bin/Debug/netcoreapp2.0/test_music.pdb
+/Users/pavelza/Documents/work/test/test_music/obj/Debug/netcoreapp2.0/test_music.csprojResolveAssemblyReference.cache
+/Users/pavelza/Documents/work/test/test_music/obj/Debug/netcoreapp2.0/test_music.csproj.CoreCompileInputs.cache
+/Users/pavelza/Documents/work/test/test_music/obj/Debug/netcoreapp2.0/test_music.AssemblyInfoInputs.cache
+/Users/pavelza/Documents/work/test/test_music/obj/Debug/netcoreapp2.0/test_music.AssemblyInfo.cs
+/Users/pavelza/Documents/work/test/test_music/obj/Debug/netcoreapp2.0/test_music.dll
+/Users/pavelza/Documents/work/test/test_music/obj/Debug/netcoreapp2.0/test_music.pdb
