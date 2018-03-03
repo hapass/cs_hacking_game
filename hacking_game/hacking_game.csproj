@@ -8,4 +8,10 @@
   <ItemGroup>
     <PackageReference Include="OpenTK.NETCore" Version="1.1.2749.6433" />
   </ItemGroup>
+  <ItemGroup>
+    <None Remove="assets\print_sound.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="assets\print_sound.wav" />
+  </ItemGroup>
 </Project>

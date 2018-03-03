@@ -1,14 +1,13 @@
 ﻿using System;
 using System.Threading.Tasks;
 
-namespace test
+namespace Game
 {
     class MainClass
     {
         public static bool isEnd = false;
         public static bool hasWon = false;
         public static Random numberRandom;
-
 
         public static void Main(string[] args)
         {
