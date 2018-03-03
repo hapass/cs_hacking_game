@@ -50,7 +50,7 @@ namespace test
         {
             var random = new Random();
             var chars = message.ToCharArray();
-            foreach(var ch in chars)
+            foreach (var ch in chars)
             {
                 var timeToFindCharacter = random.Next(10, 100);
                 await Task.Delay(timeToFindCharacter);
@@ -67,7 +67,7 @@ namespace test
             {
                 ReadInput();
 
-                if(isEnd)
+                if (isEnd)
                 {
                     Console.WriteLine(hasWon ? "You win life." : "You loose.");
                     Console.WriteLine("Press any key to continue.");
@@ -86,7 +86,7 @@ namespace test
             {
                 OnInput(inputInteger);
             }
-            else 
+            else
             {
                 Console.WriteLine("Please enter an integer.");
             }
