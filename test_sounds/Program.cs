@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Media;
 using System.Threading.Tasks;
 
 namespace test
@@ -10,13 +9,9 @@ namespace test
         public static bool hasWon = false;
         public static Random numberRandom;
 
-        public static SoundPlayer sound = new SoundPlayer(Environment.CurrentDirectory + "/print_sound.wav");
 
         public static void Main(string[] args)
         {
-            sound.Load();
-            Console.WriteLine($"Loading complete: {sound.IsLoadCompleted}");
-
             StartGame();
             StartLoop();
         }
@@ -54,7 +49,6 @@ namespace test
             {
                 var timeToFindCharacter = random.Next(10, 100);
                 await Task.Delay(timeToFindCharacter);
-                sound.PlaySync();
                 Console.Write(ch);
             }
 
