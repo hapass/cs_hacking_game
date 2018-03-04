@@ -5,11 +5,11 @@ namespace hacking_game
 {
     class MainClass
     {
-        public static bool isEnd = false;
-        public static bool hasWon = false;
+        public static bool isEnd;
+        public static bool hasWon;
         public static Random numberRandom;
 
-        public static void Main(string[] args)
+        public static void Main()
         {
             Sound.Load();
             StartGame();

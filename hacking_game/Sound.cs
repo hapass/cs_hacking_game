@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Diagnostics;
 using System.IO;
 using System.Reflection;
 using System.Threading;
@@ -8,7 +7,7 @@ using OpenTK.Audio.OpenAL;
 
 namespace hacking_game
 {
-    public class Sound
+    public static class Sound
     {
         public static AudioContext context;
         public static int buffer;
@@ -18,7 +17,7 @@ namespace hacking_game
         public static byte[] LoadWave(Stream stream, out int channels, out int bits, out int rate)
         {
             if (stream == null)
-                throw new ArgumentNullException("stream");
+                throw new ArgumentNullException(nameof(stream));
 
             using (BinaryReader reader = new BinaryReader(stream))
             {
@@ -76,8 +75,7 @@ namespace hacking_game
             buffer = AL.GenBuffer();
             source = AL.GenSource();
 
-            int channels, bits_per_sample, sample_rate;
-            byte[] sound_data = LoadWave(Assembly.GetExecutingAssembly().GetManifestResourceStream("hacking_game.assets.print_sound.wav"), out channels, out bits_per_sample, out sample_rate);
+            byte[] sound_data = LoadWave(Assembly.GetExecutingAssembly().GetManifestResourceStream("hacking_game.assets.print_sound.wav"), out int channels, out int bits_per_sample, out int sample_rate);
             AL.BufferData(buffer, GetSoundFormat(channels, bits_per_sample), sound_data, sound_data.Length, sample_rate);
             AL.Source(source, ALSourcei.Buffer, buffer);
         }
@@ -93,6 +91,7 @@ namespace hacking_game
         {
             AL.DeleteSource(source);
             AL.DeleteBuffer(buffer);
+            context.Dispose();
         }
     }
 }
